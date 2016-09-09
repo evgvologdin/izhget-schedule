@@ -1,0 +1,130 @@
+.form {
+    transition: width 0.5s ease-out;
+    margin: 0 0 20px 0;
+    width: 100%;
+    
+    .mb-size({
+        margin: 0 0 10px 0;
+    });
+
+    .block {
+        margin: 0;
+        border-radius: 10px 10px 0 0;
+        position: static;
+
+        .mb-size({
+            border-radius: 0;
+        });
+    }
+
+    .form-group {
+        margin: 0 0 20px 0;
+        &:last-child {
+            margin: 0;
+        }
+    }
+
+    .submit {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+        height: 50px;
+        border-radius: 0 0 10px 10px;
+        .box-sizing;
+
+        .mb-size({
+            border-radius: 0;
+        });
+    }
+
+    label {
+        display: block;
+        margin: 0 0 10px 0;
+        font-weight: bold;
+    }
+
+    input[type="text"], 
+    input[type="number"], 
+    input[type="datetime"], 
+    select {
+        margin: 0;
+        padding: 5px 9px;
+        width: 100%;
+        height: 34px;
+        border-radius: 0px;
+        border: @color_gray 1px solid;
+        box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.15);
+        outline: none;
+        font-family:@body_font_family;
+        font-size: @body_desktop_font_size;
+        color: @color_black;
+        background: white;
+        appearance: none;
+        .box-sizing;
+
+        .cm-size({
+            font-size: @body_compact_font_size;
+        });
+
+        .mb-size({
+            font-size: @body_mobile_font_size;
+        });
+
+        &:focus {
+            border-color: @color_blue;
+            box-shadow: 0 0 0 2px fadeout(@color_blue, 80%);
+        }
+    }
+
+    button, 
+    input[type="button"] {
+        border: none;
+        outline: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        font-weight: bold;
+        background: @color_blue;
+        color: @color_white;
+
+        &:focus {
+            background: darken(@color_blue, 5%);
+        }
+        &.danger {
+            background: @color_red;
+            &:focus {
+                background: darken(@color_red, 5%);
+            }
+        }
+    }
+
+    .has-error {
+        label {
+            color: @color_red;
+        }
+        input[type="text"], 
+        input[type="number"], 
+        input[type="datetime"], 
+        select {
+            color: @color_red;
+            border-color: @color_red;
+            &:focus {
+                border-color: @color_red;
+                box-shadow: 0 0 0 2px fadeout(@color_red, 80%);
+            }
+        }
+
+        button, 
+        input[type="button"] {
+            background: @color_red;
+            &:focus {
+                box-shadow: inset 0 0 0 2px lighten(@color_red, 80%);
+            }
+            &:click {
+                background: lighten(@color_red, 80%);
+            }
+        }
+    }
+}

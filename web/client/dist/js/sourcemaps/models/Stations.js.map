@@ -1,0 +1,1 @@
+{"version":3,"sources":["models/Stations.coffee"],"names":[],"mappings":"AAAA,IAAA;;;AAAA,MAAA,CAAO,CAAC,cAAD,CAAP,EAAyB,SAAC,KAAD;SACjB;;;;;;;oBACJ,OAAA,GAAS;;;;KADS;AADG,CAAzB","file":"../../models/Stations.js","sourcesContent":["define ['common/Model'], (model) ->\n  class model extends model\n    loadUrl: '/api/stations'"]}

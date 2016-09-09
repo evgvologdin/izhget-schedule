@@ -1,0 +1,32 @@
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+@keyframes loading {
+    0% {
+        background-position: 0px 0px;
+    }
+    100% {
+        background-position: 0px 20px;
+    }
+}
+
+.loading {
+    background-image: url('/client/img/loading.png') !important;
+    animation-name: loading;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.hide {
+    display: none;
+}

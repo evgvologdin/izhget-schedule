@@ -1,0 +1,112 @@
+.block {
+    transition: opacity 0.5s ease-out 0.3s, background-color 0.3s ease-out;
+    position: relative;
+    border-radius: 10px;
+    padding: 0 20px 20px 20px;
+    background: @color_default_block;
+    width: 100%;
+    margin: 0 0 20px 0;
+    .box-sizing;
+
+    .mb-size({
+        margin: 0 0 10px 0;
+        padding: 0 10px 20px 10px;
+        border-radius: 0;
+    });
+    
+    h2 {
+        font-size: @body_desktop_font_size;
+        margin: 0px -20px 20px -20px;
+        padding: 15px 20px;
+        border-bottom: @color_default_line 1px solid;
+        white-space: nowrap;
+        owerflow: hidden;
+        position: relative;
+        .cm-size({
+            font-size: @body_compact_font_size;
+        });
+        .mb-size({
+            margin: 0px -10px 20px -10px;
+            padding: 15px 10px;
+            font-size: @body_mobile_font_size;
+        });
+        &:after {
+            content: '';
+            position: absolute;
+            right: 0px;
+            top: 10px;
+            height: 30px;
+            width: 30px;
+            background: @color_default_block;
+            box-shadow: -10px 0 5px -5px @color_default_block; 
+        }
+    }
+
+    .close {
+        width: 12px;
+        height: 12px;
+        font-weight: bold;
+        font-style: none;
+        color: black;
+        display: block;
+        font-size: 24px;
+        line-height: 10px;
+        .opacity(0.3);
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        overflow: hidden;
+        cursor: pointer;
+        &:after {
+            content: '×';
+        }
+        &:hover {
+            .opacity(0.6);
+        }
+        .mb-size({
+            right: 10px;
+        });
+    }
+
+    .message {
+        color: @color_white;
+        text-align: center;
+        display: none;
+    }
+    
+    &.error {
+        background: @color_error_block;
+
+        h2 {
+            color: #ffffff;
+            border-bottom-color: @color_error_line;
+                &:after {
+                    background: @color_error_block;
+                    box-shadow: none;
+                    box-shadow: -10px 0 5px -5px @color_error_block; 
+                }
+        }
+
+        .message {
+            display: block;
+        }
+    }
+    
+    &.loading {
+        padding-top: 20px;
+        background: @color_loading_block;
+        h2 {
+            display: none;
+        }
+        .close {
+            display: none;
+        }
+        .message {
+            display: block;
+        }
+    }
+}
+
+@import 'routes.less'; 
+@import 'form.less'; 
+@import 'modal.less';

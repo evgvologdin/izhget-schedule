@@ -1,0 +1,6 @@
+vendor
+.idea
+node_modules
+web/client/vendor
+composer.lock
+composer.phar

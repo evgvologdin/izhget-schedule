@@ -1,0 +1,17 @@
+{
+  "author": "Evgeniy Vologdin",
+  "version": "1.0.0",
+  "devDependencies": {
+    "gulp": "*",
+    "gulp-plumber": "*",
+    "gulp-rename": "*",
+    "gulp-autoprefixer": "2.*",
+    "gulp-uglify": "*",
+    "gulp-concat": "*",
+    "gulp-less": "*",
+    "gulp-cssmin": "*",
+    "gulp-requirejs": "*",
+    "gulp-coffee": "*",
+    "gulp-sourcemaps": "*"
+  }
+}

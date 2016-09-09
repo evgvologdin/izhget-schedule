@@ -1,0 +1,28 @@
+{
+  "short_name": "Расписание трамваев",
+  "name": "Расписание трамваев в Ижевске",
+  "icons": [
+    {
+      "src": "/client/icons/webapp-1x.png",
+      "sizes": "48x48"
+    },
+    {
+      "src": "/client/icons/webapp-1.5x.png",
+      "sizes": "72x72"
+    },
+    {
+      "src": "/client/icons/webapp-2x.png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "/client/icons/webapp-3x.png",
+      "sizes": "144x144"
+    },
+    {
+      "src": "/client/icons/webapp-4x.png",
+      "sizes": "192x192"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone"
+}

@@ -1,0 +1,103 @@
+header {
+    width: @layout_desktop;
+    height: 40px;
+    margin: 30px auto 50px auto;
+    padding: 0px;
+    display: block;
+    position: relative;
+    .box-sizing;
+    .cm-size({
+        padding: 0 20px;
+        width: @layout_compact;
+    });
+    .mb-size({
+        height: auto;
+        padding: 12px 10px 20px 10px;
+        margin: 0 0 10px 0;
+        width: @layout_mobile;
+        .vertical-gradient(@color_blue, darken(@color_blue, 10%));
+        box-shadow: 0 1px 3px fadeout(@color_black, 60%);
+    });
+    
+    h1 {
+        font-size: @header_desktop_font_size;
+        font-style: italic;
+        font-weight: bold;
+        margin: 0;
+        padding: 10px 0 0 0;
+        position: relative;
+        z-index: 10;
+        .cm-size({
+            font-size: @header_compact_font_size;
+        });
+        .mb-size({
+            position: static;
+            font-size: @header_mobile_font_size;
+            font-weight: normal;
+            font-style: normal;
+            text-align: left !important;
+            padding: 6px 0 0 0;
+        });
+        a {
+            transition: color 0.3s ease-out;
+            text-decoration: none;
+            color: @color_black;
+            background: @color_body;
+            padding: 0 10px;
+            .mb-size({
+                padding: 0px;
+                color: @color_white;
+                background: none;
+            });
+        }
+        a:hover {
+            color: @color_blue;
+            .mb-size({
+                color: @color_white;
+            });
+        }
+    }
+    
+    hr {
+        top: 19px;
+        left: 20px;
+        right: 20px;
+        position: absolute;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        background: transparent;
+        border-top: @color_gray 2px dotted;
+        z-index: 5;
+        .mb-size({
+            display: none;
+        });
+    }
+    &:after, &:before {
+        z-index: 15;
+        content: '';
+        display: block;
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: 0px;
+        border-radius: 20px;
+        .mb-size({
+            display: none;
+        });
+    }
+    &:before {
+        left: 0px;
+        .cm-size({
+            left: 20px;
+        });
+        background: @color_start_circle;
+    }
+    &:after {
+        right: 0px;
+        .cm-size({
+            right: 20px;
+        });
+        background: @color_finish_circle;
+    }
+}
